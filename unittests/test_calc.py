@@ -11,3 +11,5 @@ class Test_Calc(unittest.TestCase):
     def test_divide(self):
         self.assertEqual(calc.divide(18,3),6)
         self.assertRaises(calc.DivisionError,calc.divide,18,0)
+
+# $ python -m unittest unittests.test_calc
