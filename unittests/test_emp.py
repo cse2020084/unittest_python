@@ -10,6 +10,7 @@ class test_emp(unittest.TestCase):
     def setUp(self):
         print('in set up method')
         self.emp1=Employee('Ram',20)
+        self.emp1.update_mail('Dev',90)
     
     def tearDown(self):
         print('in tear down method')
@@ -20,4 +21,5 @@ class test_emp(unittest.TestCase):
         return super().tearDownClass()
     
     def test_mail(self):
+        print(self.emp1.mail)
         self.assertEqual(self.emp1.mail,'Ram@20.com')
